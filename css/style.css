@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  width: 100vw;
+  height: 100vh;
+}
+.slides img {
+  position: absolute;
+  max-width: 100%;
+  display: none;
+}
+.index {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: white;
+  font-size: 20px;
+  background-color: rgb(255, 77, 77);
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.prev,
+.next {
+  color: white;
+  background-color: #ff4d4d;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px inset,
+    rgba(9, 30, 66, 0.13) 0px 0px 1px 1px inset;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+.prev:active,
+.next:active {
+  background-color: #be3939;
+}
+.prev.disabled,
+.next.disabled {
+  background-color: rgba(255, 77, 77, 0.5);
+  cursor: no-drop;
+}
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+}
+.indicators {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.indicators img {
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.5;
+  width: 55px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  border: 1.5px solid white;
+}
+.indicators img.active {
+  opacity: 1;
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -o-transform: scale(1.15);
+}
+.copyright {
+  display: block;
+  width: fit-content;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.copyright img {
+  max-width: 150px;
+}
