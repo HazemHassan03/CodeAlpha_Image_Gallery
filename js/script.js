@@ -52,7 +52,7 @@ function removeActives() {
 }
 
 function control() {
-  currentIndex.textContent = `Slide #${currentSlide} of ${imagesNumber}`;
+  currentIndex.textContent = `Image #${currentSlide} of ${imagesNumber}`;
   removeActives();
   images[currentSlide - 1].classList.add("active");
   nav.children[currentSlide - 1].classList.add("active");
