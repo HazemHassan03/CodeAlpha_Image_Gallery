@@ -12,7 +12,7 @@ body {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
 }
 .slides img {
   display: none;
