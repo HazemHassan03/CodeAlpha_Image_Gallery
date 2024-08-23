@@ -5,23 +5,25 @@ let images = Array.from(document.querySelectorAll(".slides img")),
   prev = document.getElementById("prev"),
   next = document.getElementById("next");
 
+if (localStorage.getItem("Current image")) {
+  currentSlide = localStorage.getItem("Current image");
+}
+
 function prevSlide() {
-  if (currentSlide > 1) {
-    --currentSlide;
-    control();
-  } else if (currentSlide === 1) {
+  if (currentSlide == 1) {
     currentSlide = imagesNumber;
-    control();
+  } else {
+    --currentSlide;
   }
+  control();
 }
 function nextSlide() {
-  if (currentSlide < imagesNumber) {
-    ++currentSlide;
-    control();
-  } else if (currentSlide === imagesNumber) {
+  if (currentSlide == imagesNumber) {
     currentSlide = 1;
-    control();
+  } else {
+    ++currentSlide;
   }
+  control();
 }
 prev.addEventListener("click", prevSlide);
 next.addEventListener("click", nextSlide);
@@ -62,5 +64,6 @@ function control() {
   background-position: center;
   background-size: cover;
   `;
+  localStorage.setItem("Current image", currentSlide);
 }
 control();
