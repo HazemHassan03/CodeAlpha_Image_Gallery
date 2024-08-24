@@ -68,6 +68,4 @@ function control() {
 }
 control();
 
-setInerval(() => {
-  nextSlide();
-}, 5000);
+setInterval(nextSlide, 5000);
