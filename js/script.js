@@ -67,3 +67,7 @@ function control() {
   localStorage.setItem("Current image", currentSlide);
 }
 control();
+
+setInerval(() => {
+  nextSlide();
+}, 5000);
