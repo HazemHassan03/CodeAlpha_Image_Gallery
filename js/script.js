@@ -67,5 +67,3 @@ function control() {
   localStorage.setItem("Current image", currentSlide);
 }
 control();
-
-setInterval(nextSlide, 10000);
