@@ -1,4 +1,4 @@
-# Image_Gallery
+# Image Gallery
 This is an Image gallery I developed using HTML, CSS, and JavaScript. 
 
 Features:
